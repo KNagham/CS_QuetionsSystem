@@ -30,6 +30,9 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnRead = new System.Windows.Forms.Button();
+            this.dgRead = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,14 +48,28 @@
             this.txtO1 = new System.Windows.Forms.TextBox();
             this.txtQuestion = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblId = new System.Windows.Forms.Label();
+            this.txtId_U = new System.Windows.Forms.TextBox();
+            this.btnSearch_U = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnUpdate_U = new System.Windows.Forms.Button();
+            this.cbCorrectAnswer_U = new System.Windows.Forms.ComboBox();
+            this.txtO3_U = new System.Windows.Forms.TextBox();
+            this.txtO4_U = new System.Windows.Forms.TextBox();
+            this.txtO2_U = new System.Windows.Forms.TextBox();
+            this.txtO1_U = new System.Windows.Forms.TextBox();
+            this.txtQuestion_U = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dgRead = new System.Windows.Forms.DataGridView();
-            this.btnRead = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgRead)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -80,6 +97,36 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Read";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(6, 564);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnRead
+            // 
+            this.btnRead.Location = new System.Drawing.Point(909, 564);
+            this.btnRead.Name = "btnRead";
+            this.btnRead.Size = new System.Drawing.Size(93, 23);
+            this.btnRead.TabIndex = 1;
+            this.btnRead.Text = "Refreash";
+            this.btnRead.UseVisualStyleBackColor = true;
+            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
+            // 
+            // dgRead
+            // 
+            this.dgRead.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgRead.Location = new System.Drawing.Point(0, 6);
+            this.dgRead.Name = "dgRead";
+            this.dgRead.ReadOnly = true;
+            this.dgRead.RowHeadersWidth = 51;
+            this.dgRead.RowTemplate.Height = 24;
+            this.dgRead.Size = new System.Drawing.Size(1059, 545);
+            this.dgRead.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -218,6 +265,22 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.lblId);
+            this.tabPage3.Controls.Add(this.txtId_U);
+            this.tabPage3.Controls.Add(this.btnSearch_U);
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.label8);
+            this.tabPage3.Controls.Add(this.label9);
+            this.tabPage3.Controls.Add(this.label10);
+            this.tabPage3.Controls.Add(this.label11);
+            this.tabPage3.Controls.Add(this.label12);
+            this.tabPage3.Controls.Add(this.btnUpdate_U);
+            this.tabPage3.Controls.Add(this.cbCorrectAnswer_U);
+            this.tabPage3.Controls.Add(this.txtO3_U);
+            this.tabPage3.Controls.Add(this.txtO4_U);
+            this.tabPage3.Controls.Add(this.txtO2_U);
+            this.tabPage3.Controls.Add(this.txtO1_U);
+            this.tabPage3.Controls.Add(this.txtQuestion_U);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -225,6 +288,144 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Update";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(41, 26);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(20, 16);
+            this.lblId.TabIndex = 22;
+            this.lblId.Text = "ID";
+            // 
+            // txtId_U
+            // 
+            this.txtId_U.Location = new System.Drawing.Point(77, 26);
+            this.txtId_U.Name = "txtId_U";
+            this.txtId_U.Size = new System.Drawing.Size(100, 22);
+            this.txtId_U.TabIndex = 21;
+            // 
+            // btnSearch_U
+            // 
+            this.btnSearch_U.Location = new System.Drawing.Point(183, 25);
+            this.btnSearch_U.Name = "btnSearch_U";
+            this.btnSearch_U.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch_U.TabIndex = 20;
+            this.btnSearch_U.Text = "Search";
+            this.btnSearch_U.UseVisualStyleBackColor = true;
+            this.btnSearch_U.Click += new System.EventHandler(this.btnSearch_U_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(402, 456);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(97, 16);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Correct Answer";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(116, 339);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 16);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Option 3";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(615, 330);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 16);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Option 4";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(630, 224);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 16);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Option 2";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(116, 224);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(56, 16);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Option 1";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(439, 33);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 16);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Question";
+            // 
+            // btnUpdate_U
+            // 
+            this.btnUpdate_U.Location = new System.Drawing.Point(908, 527);
+            this.btnUpdate_U.Name = "btnUpdate_U";
+            this.btnUpdate_U.Size = new System.Drawing.Size(110, 43);
+            this.btnUpdate_U.TabIndex = 10;
+            this.btnUpdate_U.Text = "Update";
+            this.btnUpdate_U.UseVisualStyleBackColor = true;
+            this.btnUpdate_U.Click += new System.EventHandler(this.btnUpdate_U_Click);
+            // 
+            // cbCorrectAnswer_U
+            // 
+            this.cbCorrectAnswer_U.FormattingEnabled = true;
+            this.cbCorrectAnswer_U.Location = new System.Drawing.Point(380, 494);
+            this.cbCorrectAnswer_U.Name = "cbCorrectAnswer_U";
+            this.cbCorrectAnswer_U.Size = new System.Drawing.Size(178, 24);
+            this.cbCorrectAnswer_U.TabIndex = 9;
+            // 
+            // txtO3_U
+            // 
+            this.txtO3_U.Location = new System.Drawing.Point(88, 382);
+            this.txtO3_U.Multiline = true;
+            this.txtO3_U.Name = "txtO3_U";
+            this.txtO3_U.Size = new System.Drawing.Size(258, 62);
+            this.txtO3_U.TabIndex = 8;
+            // 
+            // txtO4_U
+            // 
+            this.txtO4_U.Location = new System.Drawing.Point(573, 373);
+            this.txtO4_U.Multiline = true;
+            this.txtO4_U.Name = "txtO4_U";
+            this.txtO4_U.Size = new System.Drawing.Size(258, 62);
+            this.txtO4_U.TabIndex = 7;
+            // 
+            // txtO2_U
+            // 
+            this.txtO2_U.Location = new System.Drawing.Point(573, 253);
+            this.txtO2_U.Multiline = true;
+            this.txtO2_U.Name = "txtO2_U";
+            this.txtO2_U.Size = new System.Drawing.Size(258, 62);
+            this.txtO2_U.TabIndex = 5;
+            // 
+            // txtO1_U
+            // 
+            this.txtO1_U.Location = new System.Drawing.Point(88, 253);
+            this.txtO1_U.Multiline = true;
+            this.txtO1_U.Name = "txtO1_U";
+            this.txtO1_U.Size = new System.Drawing.Size(258, 62);
+            this.txtO1_U.TabIndex = 4;
+            // 
+            // txtQuestion_U
+            // 
+            this.txtQuestion_U.Location = new System.Drawing.Point(88, 64);
+            this.txtQuestion_U.Multiline = true;
+            this.txtQuestion_U.Name = "txtQuestion_U";
+            this.txtQuestion_U.Size = new System.Drawing.Size(849, 152);
+            this.txtQuestion_U.TabIndex = 3;
             // 
             // tabPage4
             // 
@@ -236,36 +437,6 @@
             this.tabPage4.Text = "Delete";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // dgRead
-            // 
-            this.dgRead.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgRead.Location = new System.Drawing.Point(0, 6);
-            this.dgRead.Name = "dgRead";
-            this.dgRead.ReadOnly = true;
-            this.dgRead.RowHeadersWidth = 51;
-            this.dgRead.RowTemplate.Height = 24;
-            this.dgRead.Size = new System.Drawing.Size(1059, 545);
-            this.dgRead.TabIndex = 0;
-            // 
-            // btnRead
-            // 
-            this.btnRead.Location = new System.Drawing.Point(909, 564);
-            this.btnRead.Name = "btnRead";
-            this.btnRead.Size = new System.Drawing.Size(93, 23);
-            this.btnRead.TabIndex = 1;
-            this.btnRead.Text = "Refreash";
-            this.btnRead.UseVisualStyleBackColor = true;
-            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(6, 564);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // frmAdminCRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -276,9 +447,11 @@
             this.Text = "adminCRUD";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgRead)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgRead)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -306,5 +479,21 @@
         private System.Windows.Forms.DataGridView dgRead;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnRead;
+        private System.Windows.Forms.Button btnUpdate_U;
+        private System.Windows.Forms.ComboBox cbCorrectAnswer_U;
+        private System.Windows.Forms.TextBox txtO3_U;
+        private System.Windows.Forms.TextBox txtO4_U;
+        private System.Windows.Forms.TextBox txtO2_U;
+        private System.Windows.Forms.TextBox txtO1_U;
+        private System.Windows.Forms.TextBox txtQuestion_U;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.TextBox txtId_U;
+        private System.Windows.Forms.Button btnSearch_U;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }

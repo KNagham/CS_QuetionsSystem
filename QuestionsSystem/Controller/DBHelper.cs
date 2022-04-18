@@ -22,5 +22,12 @@ namespace QuestionsSystem.Controller
             list =context.Elements.ToList();
             return list;
         }
+
+        public static void UpdateRecord(Element temp)
+        {
+            QuestionsSystemEntities context = new QuestionsSystemEntities();
+            context.Entry(temp).State = System.Data.Entity.EntityState.Modified;
+            context.SaveChanges();
+        }
     }
 }
