@@ -65,11 +65,18 @@
             this.txtO1_U = new System.Windows.Forms.TextBox();
             this.txtQuestion_U = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.lblId_D = new System.Windows.Forms.Label();
+            this.txtId_D = new System.Windows.Forms.TextBox();
+            this.btnSearch_D = new System.Windows.Forms.Button();
+            this.lblQuestion_D = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.txtQuestion_D = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgRead)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -429,6 +436,12 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.lblId_D);
+            this.tabPage4.Controls.Add(this.txtId_D);
+            this.tabPage4.Controls.Add(this.btnSearch_D);
+            this.tabPage4.Controls.Add(this.lblQuestion_D);
+            this.tabPage4.Controls.Add(this.btnDelete);
+            this.tabPage4.Controls.Add(this.txtQuestion_D);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -436,6 +449,60 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Delete";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // lblId_D
+            // 
+            this.lblId_D.AutoSize = true;
+            this.lblId_D.Location = new System.Drawing.Point(47, 25);
+            this.lblId_D.Name = "lblId_D";
+            this.lblId_D.Size = new System.Drawing.Size(20, 16);
+            this.lblId_D.TabIndex = 28;
+            this.lblId_D.Text = "ID";
+            // 
+            // txtId_D
+            // 
+            this.txtId_D.Location = new System.Drawing.Point(83, 25);
+            this.txtId_D.Name = "txtId_D";
+            this.txtId_D.Size = new System.Drawing.Size(100, 22);
+            this.txtId_D.TabIndex = 27;
+            // 
+            // btnSearch_D
+            // 
+            this.btnSearch_D.Location = new System.Drawing.Point(189, 24);
+            this.btnSearch_D.Name = "btnSearch_D";
+            this.btnSearch_D.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch_D.TabIndex = 26;
+            this.btnSearch_D.Text = "Search";
+            this.btnSearch_D.UseVisualStyleBackColor = true;
+            this.btnSearch_D.Click += new System.EventHandler(this.btnSearch_D_Click);
+            // 
+            // lblQuestion_D
+            // 
+            this.lblQuestion_D.AutoSize = true;
+            this.lblQuestion_D.Location = new System.Drawing.Point(445, 32);
+            this.lblQuestion_D.Name = "lblQuestion_D";
+            this.lblQuestion_D.Size = new System.Drawing.Size(60, 16);
+            this.lblQuestion_D.TabIndex = 25;
+            this.lblQuestion_D.Text = "Question";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(914, 526);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(110, 43);
+            this.btnDelete.TabIndex = 24;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // txtQuestion_D
+            // 
+            this.txtQuestion_D.Location = new System.Drawing.Point(94, 63);
+            this.txtQuestion_D.Multiline = true;
+            this.txtQuestion_D.Name = "txtQuestion_D";
+            this.txtQuestion_D.ReadOnly = true;
+            this.txtQuestion_D.Size = new System.Drawing.Size(849, 152);
+            this.txtQuestion_D.TabIndex = 23;
             // 
             // frmAdminCRUD
             // 
@@ -452,6 +519,8 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -495,5 +564,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblId_D;
+        private System.Windows.Forms.TextBox txtId_D;
+        private System.Windows.Forms.Button btnSearch_D;
+        private System.Windows.Forms.Label lblQuestion_D;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.TextBox txtQuestion_D;
     }
 }

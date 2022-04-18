@@ -29,5 +29,13 @@ namespace QuestionsSystem.Controller
             context.Entry(temp).State = System.Data.Entity.EntityState.Modified;
             context.SaveChanges();
         }
+        public static void DeleteQustion(Element Item)
+        {
+            QuestionsSystemEntities context = new QuestionsSystemEntities();
+            context.Entry(Item).State = System.Data.Entity.EntityState.Deleted;
+            context.SaveChanges();
+        }
+
+        
     }
 }

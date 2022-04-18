@@ -21,6 +21,7 @@ namespace QuestionsSystem.View
             InitializeComponent();
             InitGui();
             InitGui_Update(false);
+            InitGUIDelete(true);
         }
         private void UpdateGUIClear()
         {
@@ -31,6 +32,10 @@ namespace QuestionsSystem.View
             txtO3_U.Text = "";
             txtO4_U.Text = "";
             cbCorrectAnswer_U.Text = "";
+        }
+        private void InitGUIDelete(bool state)
+        {
+            txtId_D.Enabled = state;
         }
         private void InitGui_Update(bool canUpdate)
         {
@@ -117,6 +122,7 @@ namespace QuestionsSystem.View
                 {
                     foundIt = true;
                     ReadToUpdate(Item);
+                    InitGUIDelete(false);
                     break;
                 }
                 if (!foundIt)
@@ -159,6 +165,54 @@ namespace QuestionsSystem.View
             InitGui_Update(false);
             UpdateGUIClear();
 
+        }
+
+       
+        private void btnSearch_D_Click(object sender, EventArgs e)
+        {
+            bool foundIt = false;
+            int id;
+            try
+            {
+                id = int.Parse(txtId_D.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Please Enter digit Number");
+                return;
+            }
+            List<Element> elements = DBHelper.ReadQuestions();
+            foreach (Element Item in elements)
+            {
+                if (Item.id == id)
+                {
+                    foundIt = true;
+                    txtQuestion_D.Text= Item.question;
+                    InitGUIDelete(false);
+                    break;
+                }
+            }
+            if (!foundIt)
+            {
+                MessageBox.Show("Id is not Exist");
+            }
+        }
+       
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            List<Element> elements = DBHelper.ReadQuestions();
+            foreach(Element Item in elements)
+            {
+                if(Item.id == int.Parse(txtId_D.Text))
+                {
+                    DBHelper.DeleteQustion(Item);
+                }
+            }
+            MessageBox.Show("Data has been deleted");
+            InitGUIDelete(true);
+            txtId_D.Text = "";
+            txtQuestion_D.Text = "";
         }
     }
 }
