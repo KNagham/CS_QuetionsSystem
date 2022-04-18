@@ -16,5 +16,13 @@ namespace QuestionsSystem.View
         {
             InitializeComponent();
         }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.ShowDialog();
+            this.Close();
+        }
     }
 }

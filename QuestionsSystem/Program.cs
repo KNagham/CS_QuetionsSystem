@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuestionsSystem
+namespace QuestionsSystem.View
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace QuestionsSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new frmWelcome());
         }
     }
 }

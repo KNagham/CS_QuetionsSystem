@@ -55,10 +55,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modell\Admin.cs">
+      <DependentUpon>QuestionSystemModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modell\Element.cs">
+      <DependentUpon>QuestionSystemModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modell\QuestionSystemModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QuestionSystemModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modell\QuestionSystemModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuestionSystemModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Modell\QuestionSystemModel.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -73,6 +84,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\frmWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmWelcome.Designer.cs">
+      <DependentUpon>frmWelcome.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -82,6 +99,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmWelcome.resx">
+      <DependentUpon>frmWelcome.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Modell\QuestionSystemModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>QuestionSystemModel.Designer.cs</LastGenOutput>
@@ -107,6 +130,12 @@
     <Content Include="Modell\QuestionSystemModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>QuestionSystemModel.Context.cs</LastGenOutput>
+      <DependentUpon>QuestionSystemModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Modell\QuestionSystemModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuestionSystemModel.edmx</DependentUpon>
+      <LastGenOutput>QuestionSystemModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

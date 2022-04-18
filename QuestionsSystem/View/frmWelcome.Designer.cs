@@ -41,6 +41,7 @@
             this.btnAdmin.TabIndex = 0;
             this.btnAdmin.Text = "ADMIN";
             this.btnAdmin.UseVisualStyleBackColor = false;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // frmWelcome
             // 

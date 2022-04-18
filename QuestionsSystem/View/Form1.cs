@@ -8,13 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuestionsSystem
+namespace QuestionsSystem.View
 {
     public partial class frmLogin : Form
     {
         public frmLogin()
         {
             InitializeComponent();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmWelcome frmWelcome = new frmWelcome();
+            frmWelcome.ShowDialog();
+            this.Close();
         }
     }
 }
