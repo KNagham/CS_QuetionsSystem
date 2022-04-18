@@ -15,5 +15,12 @@ namespace QuestionsSystem.Controller
             context.Elements.Add(element);
             context.SaveChanges();
         }
+        public static List<Element> ReadQuestions()
+        {
+            List<Element> list = new List<Element>();
+            QuestionsSystemEntities context = new QuestionsSystemEntities();
+            list =context.Elements.ToList();
+            return list;
+        }
     }
 }

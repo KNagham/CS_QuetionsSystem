@@ -46,8 +46,13 @@
             this.txtQuestion = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dgRead = new System.Windows.Forms.DataGridView();
+            this.btnRead = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgRead)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -65,6 +70,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.btnRead);
+            this.tabPage1.Controls.Add(this.dgRead);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -228,6 +236,36 @@
             this.tabPage4.Text = "Delete";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // dgRead
+            // 
+            this.dgRead.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgRead.Location = new System.Drawing.Point(0, 6);
+            this.dgRead.Name = "dgRead";
+            this.dgRead.ReadOnly = true;
+            this.dgRead.RowHeadersWidth = 51;
+            this.dgRead.RowTemplate.Height = 24;
+            this.dgRead.Size = new System.Drawing.Size(1059, 545);
+            this.dgRead.TabIndex = 0;
+            // 
+            // btnRead
+            // 
+            this.btnRead.Location = new System.Drawing.Point(909, 564);
+            this.btnRead.Name = "btnRead";
+            this.btnRead.Size = new System.Drawing.Size(93, 23);
+            this.btnRead.TabIndex = 1;
+            this.btnRead.Text = "Refreash";
+            this.btnRead.UseVisualStyleBackColor = true;
+            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(6, 564);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // frmAdminCRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -237,8 +275,10 @@
             this.Name = "frmAdminCRUD";
             this.Text = "adminCRUD";
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgRead)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -263,5 +303,8 @@
         private System.Windows.Forms.TextBox txtO2;
         private System.Windows.Forms.TextBox txtO1;
         private System.Windows.Forms.TextBox txtQuestion;
+        private System.Windows.Forms.DataGridView dgRead;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRead;
     }
 }

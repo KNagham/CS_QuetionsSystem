@@ -35,16 +35,22 @@ namespace QuestionsSystem.View
                 return;
             }
             try
-            { 
-            Element element = new Element();
-            element.question = txtQuestion.Text;
-            element.option1 = txtO1.Text;
-            element.option2 = txtO2.Text;
-            element.option3 = txtO3.Text;
-            element.option4 = txtO4.Text;
-            element.correct_answer = cbCorrectAnswer.Text;
-            DBHelper.AddQuestion(element);
-            MessageBox.Show("Question has been added");
+            {
+                Element element = new Element();
+                element.question = txtQuestion.Text;
+                element.option1 = txtO1.Text;
+                element.option2 = txtO2.Text;
+                element.option3 = txtO3.Text;
+                element.option4 = txtO4.Text;
+                element.correct_answer = cbCorrectAnswer.Text;
+                DBHelper.AddQuestion(element);
+                MessageBox.Show("Question has been added");
+                txtQuestion.Text = "";
+                txtO1.Text = "";
+                txtO2.Text = "";
+                txtO3.Text = "";
+                txtO4.Text = "";
+                cbCorrectAnswer.Text = "";
             }
             catch (Exception ex)
             {
@@ -53,6 +59,14 @@ namespace QuestionsSystem.View
             }
 
 
+        }
+
+        private void btnRead_Click(object sender, EventArgs e)
+        {
+            List<Element> elements = new List<Element>();
+            elements= DBHelper.ReadQuestions();
+            dgRead.DataSource = elements;
+            
         }
     }
 }
