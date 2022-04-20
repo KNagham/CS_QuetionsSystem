@@ -188,7 +188,7 @@ namespace QuestionsSystem.View
                 {
                     foundIt = true;
                     txtQuestion_D.Text= Item.question;
-                    InitGUIDelete(false);
+                    InitGUIDelete(true);
                     break;
                 }
             }
@@ -213,6 +213,19 @@ namespace QuestionsSystem.View
             InitGUIDelete(true);
             txtId_D.Text = "";
             txtQuestion_D.Text = "";
+        }
+
+        private void btnCancel_U_Click(object sender, EventArgs e)
+        {
+            UpdateGUIClear();
+            InitGui_Update(false);
+        }
+
+        private void btnCancel_D_Click(object sender, EventArgs e)
+        {
+            txtId_D.Text = "";
+            txtQuestion_D.Text = "";
+            InitGUIDelete(true);
         }
     }
 }

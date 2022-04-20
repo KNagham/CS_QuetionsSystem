@@ -24,5 +24,10 @@ namespace QuestionsSystem.View
             frmWelcome.ShowDialog();
             this.Close();
         }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

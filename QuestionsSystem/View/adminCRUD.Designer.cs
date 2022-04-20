@@ -71,6 +71,8 @@
             this.lblQuestion_D = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtQuestion_D = new System.Windows.Forms.TextBox();
+            this.btnCancel_D = new System.Windows.Forms.Button();
+            this.btnCancel_U = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgRead)).BeginInit();
@@ -272,6 +274,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btnCancel_U);
             this.tabPage3.Controls.Add(this.lblId);
             this.tabPage3.Controls.Add(this.txtId_U);
             this.tabPage3.Controls.Add(this.btnSearch_U);
@@ -436,6 +439,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.btnCancel_D);
             this.tabPage4.Controls.Add(this.lblId_D);
             this.tabPage4.Controls.Add(this.txtId_D);
             this.tabPage4.Controls.Add(this.btnSearch_D);
@@ -504,6 +508,26 @@
             this.txtQuestion_D.Size = new System.Drawing.Size(849, 152);
             this.txtQuestion_D.TabIndex = 23;
             // 
+            // btnCancel_D
+            // 
+            this.btnCancel_D.Location = new System.Drawing.Point(18, 526);
+            this.btnCancel_D.Name = "btnCancel_D";
+            this.btnCancel_D.Size = new System.Drawing.Size(110, 43);
+            this.btnCancel_D.TabIndex = 29;
+            this.btnCancel_D.Text = "Cancel";
+            this.btnCancel_D.UseVisualStyleBackColor = true;
+            this.btnCancel_D.Click += new System.EventHandler(this.btnCancel_D_Click);
+            // 
+            // btnCancel_U
+            // 
+            this.btnCancel_U.Location = new System.Drawing.Point(31, 527);
+            this.btnCancel_U.Name = "btnCancel_U";
+            this.btnCancel_U.Size = new System.Drawing.Size(110, 43);
+            this.btnCancel_U.TabIndex = 23;
+            this.btnCancel_U.Text = "Cancel";
+            this.btnCancel_U.UseVisualStyleBackColor = true;
+            this.btnCancel_U.Click += new System.EventHandler(this.btnCancel_U_Click);
+            // 
             // frmAdminCRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -570,5 +594,7 @@
         private System.Windows.Forms.Label lblQuestion_D;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox txtQuestion_D;
+        private System.Windows.Forms.Button btnCancel_U;
+        private System.Windows.Forms.Button btnCancel_D;
     }
 }
