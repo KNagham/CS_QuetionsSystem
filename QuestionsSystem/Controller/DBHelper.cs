@@ -35,7 +35,20 @@ namespace QuestionsSystem.Controller
             context.Entry(Item).State = System.Data.Entity.EntityState.Deleted;
             context.SaveChanges();
         }
+        public static Admin FindUser(string username)
+        {
+            Admin user = new Admin();
+            QuestionsSystemEntities context = new QuestionsSystemEntities();
+            try
+            {
+                user = context.Admins.Where(x=> x.user == username).FirstOrDefault();
+            }
+            catch
+            {
+                user = new Admin();
+            }
+            return user;
+        }
 
-        
     }
 }
