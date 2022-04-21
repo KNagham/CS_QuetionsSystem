@@ -30,7 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBack_R = new System.Windows.Forms.Button();
             this.btnRead = new System.Windows.Forms.Button();
             this.dgRead = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -48,6 +48,7 @@
             this.txtO1 = new System.Windows.Forms.TextBox();
             this.txtQuestion = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnCancel_U = new System.Windows.Forms.Button();
             this.lblId = new System.Windows.Forms.Label();
             this.txtId_U = new System.Windows.Forms.TextBox();
             this.btnSearch_U = new System.Windows.Forms.Button();
@@ -65,14 +66,13 @@
             this.txtO1_U = new System.Windows.Forms.TextBox();
             this.txtQuestion_U = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnCancel_D = new System.Windows.Forms.Button();
             this.lblId_D = new System.Windows.Forms.Label();
             this.txtId_D = new System.Windows.Forms.TextBox();
             this.btnSearch_D = new System.Windows.Forms.Button();
             this.lblQuestion_D = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtQuestion_D = new System.Windows.Forms.TextBox();
-            this.btnCancel_D = new System.Windows.Forms.Button();
-            this.btnCancel_U = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgRead)).BeginInit();
@@ -96,7 +96,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.btnBack_R);
             this.tabPage1.Controls.Add(this.btnRead);
             this.tabPage1.Controls.Add(this.dgRead);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -107,14 +107,15 @@
             this.tabPage1.Text = "Read";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnBack_R
             // 
-            this.button2.Location = new System.Drawing.Point(6, 564);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBack_R.Location = new System.Drawing.Point(6, 564);
+            this.btnBack_R.Name = "btnBack_R";
+            this.btnBack_R.Size = new System.Drawing.Size(75, 23);
+            this.btnBack_R.TabIndex = 2;
+            this.btnBack_R.Text = "Back";
+            this.btnBack_R.UseVisualStyleBackColor = true;
+            this.btnBack_R.Click += new System.EventHandler(this.btnBack_R_Click);
             // 
             // btnRead
             // 
@@ -299,6 +300,16 @@
             this.tabPage3.Text = "Update";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // btnCancel_U
+            // 
+            this.btnCancel_U.Location = new System.Drawing.Point(31, 527);
+            this.btnCancel_U.Name = "btnCancel_U";
+            this.btnCancel_U.Size = new System.Drawing.Size(110, 43);
+            this.btnCancel_U.TabIndex = 23;
+            this.btnCancel_U.Text = "Cancel";
+            this.btnCancel_U.UseVisualStyleBackColor = true;
+            this.btnCancel_U.Click += new System.EventHandler(this.btnCancel_U_Click);
+            // 
             // lblId
             // 
             this.lblId.AutoSize = true;
@@ -454,6 +465,16 @@
             this.tabPage4.Text = "Delete";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // btnCancel_D
+            // 
+            this.btnCancel_D.Location = new System.Drawing.Point(18, 526);
+            this.btnCancel_D.Name = "btnCancel_D";
+            this.btnCancel_D.Size = new System.Drawing.Size(110, 43);
+            this.btnCancel_D.TabIndex = 29;
+            this.btnCancel_D.Text = "Cancel";
+            this.btnCancel_D.UseVisualStyleBackColor = true;
+            this.btnCancel_D.Click += new System.EventHandler(this.btnCancel_D_Click);
+            // 
             // lblId_D
             // 
             this.lblId_D.AutoSize = true;
@@ -508,26 +529,6 @@
             this.txtQuestion_D.Size = new System.Drawing.Size(849, 152);
             this.txtQuestion_D.TabIndex = 23;
             // 
-            // btnCancel_D
-            // 
-            this.btnCancel_D.Location = new System.Drawing.Point(18, 526);
-            this.btnCancel_D.Name = "btnCancel_D";
-            this.btnCancel_D.Size = new System.Drawing.Size(110, 43);
-            this.btnCancel_D.TabIndex = 29;
-            this.btnCancel_D.Text = "Cancel";
-            this.btnCancel_D.UseVisualStyleBackColor = true;
-            this.btnCancel_D.Click += new System.EventHandler(this.btnCancel_D_Click);
-            // 
-            // btnCancel_U
-            // 
-            this.btnCancel_U.Location = new System.Drawing.Point(31, 527);
-            this.btnCancel_U.Name = "btnCancel_U";
-            this.btnCancel_U.Size = new System.Drawing.Size(110, 43);
-            this.btnCancel_U.TabIndex = 23;
-            this.btnCancel_U.Text = "Cancel";
-            this.btnCancel_U.UseVisualStyleBackColor = true;
-            this.btnCancel_U.Click += new System.EventHandler(this.btnCancel_U_Click);
-            // 
             // frmAdminCRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -570,7 +571,7 @@
         private System.Windows.Forms.TextBox txtO1;
         private System.Windows.Forms.TextBox txtQuestion;
         private System.Windows.Forms.DataGridView dgRead;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBack_R;
         private System.Windows.Forms.Button btnRead;
         private System.Windows.Forms.Button btnUpdate_U;
         private System.Windows.Forms.ComboBox cbCorrectAnswer_U;

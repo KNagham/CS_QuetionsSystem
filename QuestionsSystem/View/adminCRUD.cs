@@ -227,5 +227,13 @@ namespace QuestionsSystem.View
             txtQuestion_D.Text = "";
             InitGUIDelete(true);
         }
+
+        private void btnBack_R_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.ShowDialog();
+            this.Close();
+        }
     }
 }
