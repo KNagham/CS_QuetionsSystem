@@ -10,16 +10,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="elemets">
-      <EntityTypeMapping TypeName="QuestionsSystemModel.elemet">
-        <MappingFragment StoreEntitySet="elemet">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="question" ColumnName="question" />
-          <ScalarProperty Name="option1" ColumnName="option1" />
-          <ScalarProperty Name="option2" ColumnName="option2" />
-          <ScalarProperty Name="option3" ColumnName="option3" />
-          <ScalarProperty Name="option4" ColumnName="option4" />
+    <EntitySetMapping Name="Elements">
+      <EntityTypeMapping TypeName="QuestionsSystemModel.Element">
+        <MappingFragment StoreEntitySet="Element">
           <ScalarProperty Name="correct_answer" ColumnName="correct_answer" />
+          <ScalarProperty Name="option4" ColumnName="option4" />
+          <ScalarProperty Name="option3" ColumnName="option3" />
+          <ScalarProperty Name="option2" ColumnName="option2" />
+          <ScalarProperty Name="option1" ColumnName="option1" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

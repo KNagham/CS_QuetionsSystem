@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QuestionsSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QuestionsSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Admin">
           <Key>
             <PropertyRef Name="id" />
@@ -13,7 +13,7 @@
           <Property Name="user" Type="varchar" MaxLength="255" />
           <Property Name="password" Type="varchar" MaxLength="255" />
         </EntityType>
-        <EntityType Name="elemet">
+        <EntityType Name="Element">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -27,10 +27,9 @@
         </EntityType>
         <EntityContainer Name="QuestionsSystemModelStoreContainer">
           <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="elemet" EntityType="Self.elemet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Element" EntityType="Self.Element" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QuestionsSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -42,7 +41,11 @@
           <Property Name="user" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="elemet">
+        <EntityContainer Name="QuestionsSystemEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
+          <EntitySet Name="Elements" EntityType="QuestionsSystemModel.Element" />
+        </EntityContainer>
+        <EntityType Name="Element">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -54,10 +57,6 @@
           <Property Name="option4" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="correct_answer" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="QuestionsSystemEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Admins" EntityType="Self.Admin" />
-          <EntitySet Name="elemets" EntityType="Self.elemet" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -73,16 +72,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="elemets">
-            <EntityTypeMapping TypeName="QuestionsSystemModel.elemet">
-              <MappingFragment StoreEntitySet="elemet">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="question" ColumnName="question" />
-                <ScalarProperty Name="option1" ColumnName="option1" />
-                <ScalarProperty Name="option2" ColumnName="option2" />
-                <ScalarProperty Name="option3" ColumnName="option3" />
-                <ScalarProperty Name="option4" ColumnName="option4" />
+          <EntitySetMapping Name="Elements">
+            <EntityTypeMapping TypeName="QuestionsSystemModel.Element">
+              <MappingFragment StoreEntitySet="Element">
                 <ScalarProperty Name="correct_answer" ColumnName="correct_answer" />
+                <ScalarProperty Name="option4" ColumnName="option4" />
+                <ScalarProperty Name="option3" ColumnName="option3" />
+                <ScalarProperty Name="option2" ColumnName="option2" />
+                <ScalarProperty Name="option1" ColumnName="option1" />
+                <ScalarProperty Name="question" ColumnName="question" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

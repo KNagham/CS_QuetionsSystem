@@ -26,6 +26,6 @@ namespace QuestionsSystem.Model
         }
     
         public virtual DbSet<Admin> Admins { get; set; }
-        public virtual DbSet<elemet> elemets { get; set; }
+        public virtual DbSet<Element> Elements { get; set; }
     }
 }

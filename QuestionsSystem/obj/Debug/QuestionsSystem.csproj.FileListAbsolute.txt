@@ -17,3 +17,22 @@ F:\Dev\C#\CS_QuestionsSystem\QuestionsSystem\obj\Debug\QuestionsSystem.pdb
 F:\Dev\C#\CS_QuestionsSystem\QuestionsSystem\obj\Debug\QuestionsSystem.View.frmLogin.resources
 F:\Dev\C#\CS_QuestionsSystem\QuestionsSystem\obj\Debug\QuestionsSystem.View.frmAdminCRUD.resources
 F:\Dev\C#\CS_QuestionsSystem\QuestionsSystem\obj\Debug\QuestionsSystem.View.frmGame.resources
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\bin\Debug\QuestionsSystem.exe.config
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\bin\Debug\QuestionsSystem.exe
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\bin\Debug\QuestionsSystem.pdb
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\bin\Debug\EntityFramework.dll
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\bin\Debug\EntityFramework.SqlServer.dll
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\bin\Debug\EntityFramework.xml
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\bin\Debug\EntityFramework.SqlServer.xml
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\obj\Debug\QuestionsSystem.csproj.AssemblyReference.cache
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\obj\Debug\QuestionsSystem.csproj.SuggestedBindingRedirects.cache
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\obj\Debug\QuestionsSystem.Properties.Resources.resources
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\obj\Debug\QuestionsSystem.View.frmAdminCRUD.resources
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\obj\Debug\QuestionsSystem.View.frmGame.resources
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\obj\Debug\QuestionsSystem.View.frmLogin.resources
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\obj\Debug\QuestionsSystem.View.frmWelcome.resources
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\obj\Debug\QuestionsSystem.csproj.GenerateResource.cache
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\obj\Debug\QuestionsSystem.csproj.CoreCompileInputs.cache
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\obj\Debug\QuestionsSystem.csproj.CopyComplete
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\obj\Debug\QuestionsSystem.exe
+C:\Programmierung\C#\Question System\CS_QuetionsSystem\QuestionsSystem\obj\Debug\QuestionsSystem.pdb

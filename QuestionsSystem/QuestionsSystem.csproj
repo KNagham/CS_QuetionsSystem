@@ -60,7 +60,7 @@
     <Compile Include="Model\Admin.cs">
       <DependentUpon>QuestionsSystemModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\elemet.cs">
+    <Compile Include="Model\Element.cs">
       <DependentUpon>QuestionsSystemModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\QuestionsSystemModel.Context.cs">

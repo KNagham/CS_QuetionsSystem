@@ -8,7 +8,7 @@
     <Property Name="user" Type="varchar" MaxLength="255" />
     <Property Name="password" Type="varchar" MaxLength="255" />
   </EntityType>
-  <EntityType Name="elemet">
+  <EntityType Name="Element">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -22,6 +22,6 @@
   </EntityType>
   <EntityContainer Name="QuestionsSystemModelStoreContainer">
     <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="elemet" EntityType="Self.elemet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Element" EntityType="Self.Element" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

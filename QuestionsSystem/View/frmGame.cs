@@ -15,7 +15,7 @@ namespace QuestionsSystem.View
 {
     public partial class frmGame : Form
     {
-        List<elemet> _elemets = new List<elemet>();
+        List<Element> _Elements = new List<Element>();
         int _questionTotal;
         int _currentQuestion;
         int _correctAnswer;
@@ -28,21 +28,21 @@ namespace QuestionsSystem.View
 
         private void StartGame()
         {
-            _elemets = DBHelper.ReadQuestions();
-            _elemets = DataController.GetQuetsions(_elemets,2);
+            _Elements = DBHelper.ReadQuestions();
+            _Elements = DataController.GetQuetsions(_Elements,4);
             _currentQuestion = 0;
             ShowQuestion(_currentQuestion);
         }
 
         private void ShowQuestion(int index)
         {
-            txtQuestion_G.Text = _elemets.ElementAt(index).question;
-            txtO1_G.Text = _elemets.ElementAt(index).option1;
-            txtO2_G.Text = _elemets.ElementAt(index).option2;
-            txtO3_G.Text = _elemets.ElementAt(index).option3;
-            txtO4_G.Text = _elemets.ElementAt(index).option4;
+            txtQuestion_G.Text = _Elements.ElementAt(index).question;
+            txtO1_G.Text = _Elements.ElementAt(index).option1;
+            txtO2_G.Text = _Elements.ElementAt(index).option2;
+            txtO3_G.Text = _Elements.ElementAt(index).option3;
+            txtO4_G.Text = _Elements.ElementAt(index).option4;
 
-            _questionTotal = _elemets.Count;
+            _questionTotal = _Elements.Count;
             lblQuestionCounter.Text = (_currentQuestion + 1).ToString() +  "/" + _questionTotal.ToString();
         }
 
@@ -56,7 +56,7 @@ namespace QuestionsSystem.View
 
         private void cbCorrectAnswer_G_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (_elemets.ElementAt(_currentQuestion).correct_answer == cbCorrectAnswer_G.SelectedItem.ToString())
+            if (_Elements.ElementAt(_currentQuestion).correct_answer == cbCorrectAnswer_G.SelectedItem.ToString())
             {
                 MessageBox.Show("It's Correct!");
                 _correctAnswer++;

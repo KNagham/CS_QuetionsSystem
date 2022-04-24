@@ -12,7 +12,7 @@ namespace QuestionsSystem.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class elemet
+    public partial class Element
     {
         public int id { get; set; }
         public string question { get; set; }

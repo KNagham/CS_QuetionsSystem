@@ -65,7 +65,7 @@ namespace QuestionsSystem.View
 
             try
             {
-                elemet element = new elemet();
+                Element element = new Element();
                 element.question = txtQuestion.Text;
                 element.option1 = txtO1.Text;
                 element.option2 = txtO2.Text;
@@ -91,7 +91,7 @@ namespace QuestionsSystem.View
 
         private void btnRead_Click(object sender, EventArgs e)
         {
-            List<elemet> elemests = new List<elemet>();
+            List<Element> elemests = new List<Element>();
             elemests = DBHelper.ReadQuestions();
             dgRead.DataSource = DBHelper.ReadQuestions();
         }
@@ -110,8 +110,8 @@ namespace QuestionsSystem.View
                 return;
             }
 
-            List<elemet> elements = DBHelper.ReadQuestions();
-            foreach(elemet item in elements)
+            List<Element> elements = DBHelper.ReadQuestions();
+            foreach(Element item in elements)
             {
                 if (item.id == id)
                 {
@@ -126,7 +126,7 @@ namespace QuestionsSystem.View
             }
         }
 
-        private void ReadyToUpdate(elemet element)
+        private void ReadyToUpdate(Element element)
         {
             InitGUI_Update(true);
             txtQuestion_U.Text = element.question;
@@ -139,7 +139,7 @@ namespace QuestionsSystem.View
 
         private void btnUpdate_U_Click(object sender, EventArgs e)
         {
-            elemet temp = new elemet();
+            Element temp = new Element();
             temp.id = int.Parse(txtID_U.Text);
             temp.question = txtQuestion_U.Text;
             temp.option1 = txtO1_U.Text;
@@ -177,8 +177,8 @@ namespace QuestionsSystem.View
                 return;
             }
 
-            List<elemet> elements = DBHelper.ReadQuestions();
-            foreach (elemet item in elements)
+            List<Element> elements = DBHelper.ReadQuestions();
+            foreach (Element item in elements)
             {
                 if (item.id == id)
                 {
@@ -201,8 +201,8 @@ namespace QuestionsSystem.View
 
         private void btnDelete_D_Click(object sender, EventArgs e)
         {
-            List<elemet> elemets = DBHelper.ReadQuestions();
-            foreach (elemet item in elemets)
+            List<Element> Elements = DBHelper.ReadQuestions();
+            foreach (Element item in Elements)
             {
                 if (item.id == int.Parse(txtID_D.Text))
                 {

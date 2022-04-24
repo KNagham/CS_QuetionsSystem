@@ -9,29 +9,29 @@ namespace QuestionsSystem.Controller
 {
     public class DBHelper
     {
-        public static void AddQuestion(elemet element)
+        public static void AddQuestion(Element element)
         {
             QuestionsSystemEntities context = new QuestionsSystemEntities();
-            context.elemets.Add(element);
+            context.Elements.Add(element);
             context.SaveChanges();
         }
 
-        public static List<elemet> ReadQuestions()
+        public static List<Element> ReadQuestions()
         {
-            List<elemet> list = new List<elemet>();
+            List<Element> list = new List<Element>();
             QuestionsSystemEntities context = new QuestionsSystemEntities();
-            list  = context.elemets.ToList();
+            list  = context.Elements.ToList();
             return list;
         }
 
-        public static void UpdateRecord(elemet temp)
+        public static void UpdateRecord(Element temp)
         {
             QuestionsSystemEntities context = new QuestionsSystemEntities();
             context.Entry(temp).State = System.Data.Entity.EntityState.Modified;
             context.SaveChanges();
         }
 
-        public static void DeleteQuestion(elemet temp)
+        public static void DeleteQuestion(Element temp)
         {
             QuestionsSystemEntities context = new QuestionsSystemEntities();
             context.Entry(temp).State = System.Data.Entity.EntityState.Deleted;

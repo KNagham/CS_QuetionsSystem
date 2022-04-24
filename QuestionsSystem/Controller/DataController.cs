@@ -8,9 +8,9 @@ namespace QuestionsSystem.Controller
 {
     public class DataController
     {
-        public static List<elemet> GetQuetsions(List<elemet> questions, int count)
+        public static List<Element> GetQuetsions(List<Element> questions, int count)
         {
-            List<elemet> list = new List<elemet>();
+            List<Element> list = new List<Element>();
             if (count > questions.Count)
             {
                 return list;
@@ -19,7 +19,7 @@ namespace QuestionsSystem.Controller
 
             for (int i = 0; i < count; i++)
             {
-                elemet q = questions[random.Next(questions.Count)];
+                Element q = questions[random.Next(questions.Count)];
 
                 if (  !(list.Exists(e => e.id == q.id))  )
                 {
